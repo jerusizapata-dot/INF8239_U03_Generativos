@@ -3,6 +3,6 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 *.py[cod]
-scripts/*.bak
+scripts/*.bak*
 /type
 /uv
