@@ -2,17 +2,23 @@
 
 
 
-**INF-8239 · Ciencia de Datos II**
-
-**Laboratorio:** U03.LAB10
+\*\*INF-8239 · Ciencia de Datos II\*\*
 
 
 
-**Estudiante:** Laudys Jerusi Zapata
+\*\*Laboratorio:\*\* U03.LAB10
 
-**Autor académico:** Edwin Ramón José Nolasco
 
-**Proyecto:** Autoencoder y autoencoder variacional (VAE) con Fashion-MNIST
+
+\*\*Estudiante:\*\* Laudys Jerusi Zapata
+
+
+
+\*\*Autor académico:\*\* Edwin Ramón José Nolasco
+
+
+
+\*\*Proyecto:\*\* Autoencoder y autoencoder variacional (VAE) con Fashion-MNIST
 
 
 
@@ -74,6 +80,3 @@ La inteligencia artificial se utilizó como apoyo, no como sustituto de la respo
 
 Declaro que la utilización de inteligencia artificial en este laboratorio tuvo una finalidad de apoyo técnico y documental. Asumo la responsabilidad por la revisión del trabajo entregado y por la interpretación de los resultados presentados.
 
-
-
-**Estudiante:** Laudys Jerusi Zapata
