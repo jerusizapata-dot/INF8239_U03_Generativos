@@ -1,266 +1,270 @@
-# \# Model Card · Autoencoder y VAE
+\# Model Card · Autoencoder y VAE
 
-# 
 
-# \## 1. Modelos y versiones
 
-# 
+\## Información del proyecto
 
-# \*\*Proyecto:\*\* INF-8239 · Ciencia de Datos II · Unidad 03 · U03.LAB10  
 
-# \*\*Modelos:\*\* Autoencoder (AE) y Autoencoder Variacional (VAE).  
 
-# \*\*Dataset:\*\* Fashion-MNIST.  
+| Campo | Descripción |
 
-# \*\*Semilla aleatoria:\*\* 42.  
+|---|---|
 
-# \*\*Entorno:\*\* Python 3.12, TensorFlow 2.21.0 y ejecución en CPU bajo Windows.
+| Asignatura | INF-8239 · Ciencia de Datos II |
 
-# 
+| Laboratorio | U03.LAB10 |
 
-# Se implementaron dos modelos para estudiar la reconstrucción y generación de imágenes. El AE aprende una representación comprimida de las imágenes, mientras que el VAE aprende una distribución latente que permite muestrear nuevas imágenes.
+| Estudiante | Laudys Jerusi Zapata |
 
-# 
+| Autor académico | Edwin Ramón José Nolasco |
 
-# \## 2. Uso previsto y usuarios
+| Dataset | Fashion-MNIST |
 
-# 
+| Semilla | 42 |
 
-# Los modelos están destinados a fines académicos y experimentales:
+| Entorno | Python 3.12, TensorFlow 2.21.0, CPU en Windows |
 
-# 
 
-# \- Estudiar representaciones latentes de imágenes.
 
-# \- Comparar reconstrucción entre un AE y un VAE.
+\## 1. Descripción de los modelos
 
-# \- Explorar generación de imágenes a partir de vectores latentes.
 
-# \- Observar interpolaciones entre puntos del espacio latente.
 
-# \- Analizar el costo computacional y las limitaciones de los modelos generativos.
+Este proyecto implementa dos modelos de aprendizaje profundo para estudiar la reconstrucción de imágenes y la generación mediante representaciones latentes.
 
-# 
 
-# Los usuarios previstos son estudiantes, docentes y personas que estudian aprendizaje profundo.
 
-# 
+\- \*\*Autoencoder (AE):\*\* comprime una imagen en una representación latente y utiliza un decodificador para reconstruirla.
 
-# \## 3. Usos fuera de alcance
+\- \*\*Autoencoder variacional (VAE):\*\* aprende una representación probabilística regularizada mediante la divergencia KL y permite generar muestras a partir del espacio latente.
 
-# 
 
-# Estos modelos no están diseñados para:
 
-# 
+\## 2. Uso previsto
 
-# \- Identificar personas ni inferir atributos personales.
 
-# \- Tomar decisiones médicas, financieras, laborales o legales.
 
-# \- Garantizar imágenes realistas o semánticamente correctas.
+Los modelos están destinados a fines educativos y experimentales:
 
-# \- Representar toda la variedad de prendas y estilos del mundo real.
 
-# \- Utilizarse como sistemas de producción sin validación adicional.
 
-# 
+\- Estudiar la compresión y reconstrucción de imágenes.
 
-# \## 4. Dataset, licencia y particiones
+\- Explorar las diferencias entre representaciones latentes deterministas y probabilísticas.
 
-# 
+\- Generar muestras sintéticas mediante el decodificador del VAE.
 
-# Se utilizó Fashion-MNIST, un conjunto de imágenes de prendas de vestir en escala de grises, con dimensiones de 28 × 28 píxeles.
+\- Analizar interpolaciones y costos computacionales.
 
-# 
 
-# \- Entrenamiento: 60,000 imágenes.
 
-# \- Prueba: 10,000 imágenes.
+No se recomienda utilizarlos como sistemas de producción ni extrapolar directamente los resultados a imágenes de mayor resolución.
 
-# \- Rango de entrada: valores normalizados entre 0 y 1.
 
-# \- Partición de validación del AE: 10 % de los datos de entrenamiento.
 
-# \- Semilla utilizada: 42.
+\## 3. Datos y preprocesamiento
 
-# 
 
-# La fuente original del dataset es Zalando Research, distribuida bajo licencia MIT. La licencia y las condiciones deben verificarse en la fuente oficial antes de redistribuir el conjunto de datos.
 
-# 
+| Característica | Descripción |
 
-# \## 5. Arquitectura y espacio latente
+|---|---|
 
-# 
+| Conjunto de datos | Fashion-MNIST |
 
-# \### Autoencoder (AE)
+| Imágenes de entrenamiento | 60,000 |
 
-# 
+| Imágenes de prueba | 10,000 |
 
-# El AE incluye un codificador que comprime la imagen y un decodificador que reconstruye la entrada. Se entrenó con el optimizador Adam y la función de pérdida binary cross-entropy.
+| Dimensiones | 28 × 28 píxeles |
 
-# 
+| Canales | 1, escala de grises |
 
-# \- Parámetros entrenables: 25,888.
+| Preprocesamiento | Normalización al intervalo \[0, 1] |
 
-# \- Épocas completadas: 6.
+| Semilla | 42 |
 
-# \- Se aplicó parada temprana con paciencia de 2 épocas y restauración de los mejores pesos.
 
-# 
 
-# \### Autoencoder Variacional (VAE)
+Las imágenes se normalizaron para que los píxeles estuvieran entre 0 y 1. La guía del laboratorio identifica Fashion-MNIST con licencia MIT.
 
-# 
 
-# El VAE utiliza un codificador que produce la media y la log-varianza de una distribución latente, además de un decodificador que genera imágenes desde vectores latentes.
 
-# 
+\## 4. Arquitectura y espacio latente
 
-# \- Dimensión latente: 2.
 
-# \- Parámetros del codificador: 100,996.
 
-# \- Parámetros del decodificador: 101,520.
+\### Autoencoder
 
-# \- Épocas completadas: 8.
 
-# \- Función de pérdida: reconstrucción más divergencia KL.
 
-# 
+El AE utiliza un codificador para obtener una representación comprimida y un decodificador para reconstruir las imágenes. Su objetivo principal es reducir el error de reconstrucción.
 
-# El espacio latente bidimensional facilita la exploración y la interpolación, aunque limita la capacidad de representar variaciones complejas.
 
-# 
 
-# \## 6. Métricas de reconstrucción y generación
+\### Autoencoder variacional
 
-# 
 
-# Resultados registrados en `reports/training\_metrics.json` para la ejecución con semilla 42:
 
-# 
+El VAE aprende una representación probabilística del espacio latente. Su pérdida combina el error de reconstrucción y la divergencia KL. El espacio latente de dos dimensiones permite explorar visualmente las coordenadas mediante la aplicación interactiva.
 
-# | Métrica | Resultado |
 
-# |---|---:|
 
-# | Pérdida final de entrenamiento del AE | 0.3060 |
+\## 5. Resultados experimentales
 
-# | Pérdida final de validación del AE | 0.3071 |
 
-# | Pérdida total final del VAE | 273.6144 |
 
-# | Pérdida de reconstrucción del VAE | 267.3546 |
+Resultados de la ejecución registrada con semilla 42.
 
-# | Divergencia KL del VAE | 6.2598 |
 
-# | Tiempo de entrenamiento del AE | 5.16 s |
 
-# | Tiempo de entrenamiento del VAE | 8.67 s |
+| Métrica | Autoencoder | VAE |
 
-# 
+|---|---:|---:|
 
-# Las pérdidas del AE y del VAE no deben compararse directamente como si estuvieran en la misma escala. La pérdida total del VAE suma los componentes de reconstrucción y KL conforme a la implementación.
+| Épocas completadas | 6 | 8 |
 
-# 
+| Tiempo de entrenamiento | 5.16 s | 8.67 s |
 
-# Se generaron los siguientes artefactos:
+| Parámetros | 25,888 | 202,516 combinados |
 
-# 
+| Pérdida final de entrenamiento | 0.3060 | No comparable en el mismo formato |
 
-# \- `reports/ae\_vae\_panel.png`: ejemplos originales, reconstrucciones y muestras generadas.
+| Pérdida de validación del AE | 0.3071 | No registrada aquí |
 
-# \- `reports/interpolation.png`: interpolación entre puntos del espacio latente.
+| Pérdida total del VAE | No aplica en el mismo formato | 273.6144 |
 
-# \- `models/autoencoder.keras`: modelo AE entrenado.
+| Pérdida de reconstrucción del VAE | No aplica en el mismo formato | 267.3546 |
 
-# \- `models/decoder.keras`: decodificador del VAE entrenado.
+| Divergencia KL del VAE | No aplica | 6.2598 |
 
-# 
 
-# Las imágenes se inspeccionan visualmente. No se ha registrado una métrica cuantitativa independiente de calidad perceptual o realismo de las imágenes generadas.
 
-# 
+Los 202,516 parámetros del VAE corresponden a la suma del codificador (100,996) y el decodificador (101,520).
 
-# \## 7. Diversidad y vecinos cercanos
 
-# 
 
-# La generación se realizó muestreando vectores de una distribución normal estándar en el espacio latente de dos dimensiones. También se generó una secuencia de interpolación entre dos puntos latentes.
+Las pérdidas de ambos modelos no son directamente comparables porque sus objetivos de optimización y escalas son diferentes. En esta ejecución, el AE utilizó menos parámetros y requirió menos tiempo de entrenamiento; esto no demuestra por sí solo una mejor calidad de reconstrucción o generación.
 
-# 
 
-# Estas visualizaciones permiten explorar la variación entre salidas, pero no demuestran por sí solas diversidad suficiente ni ausencia de memorización. No se ha calculado una evaluación cuantitativa de vecinos cercanos ni una métrica formal de diversidad. Por tanto, no se presentan conclusiones definitivas sobre esos aspectos.
 
-# 
+\## 6. Artefactos generados
 
-# \## 8. Hardware, tiempo y tamaño
 
-# 
 
-# \- Sistema operativo: Windows.
+| Archivo | Propósito |
 
-# \- Ejecución: CPU.
+|---|---|
 
-# \- GPU: no utilizada en esta ejecución.
+| `models/autoencoder.keras` | Autoencoder entrenado |
 
-# \- Tiempo AE: aproximadamente 5.16 segundos.
+| `models/decoder.keras` | Decodificador del VAE |
 
-# \- Tiempo VAE: aproximadamente 8.67 segundos.
+| `reports/ae\_vae\_panel.png` | Panel visual de resultados |
 
-# \- Tamaño del archivo AE: 338,597 bytes.
+| `reports/interpolation.png` | Interpolación en el espacio latente |
 
-# \- Tamaño del archivo del decodificador VAE: 425,632 bytes.
+| `reports/training\_metrics.json` | Métricas y tiempos |
 
-# \- Tamaño conjunto aproximado: 764 KB.
+| `app/streamlit\_app.py` | Aplicación interactiva |
 
-# 
 
-# Los tiempos dependen del equipo, las versiones del software y las condiciones de ejecución; no deben interpretarse como una garantía de rendimiento en otros entornos.
 
-# 
+\## 7. Evaluación de generación y diversidad
 
-# \## 9. Limitaciones, riesgos y supervisión
 
-# 
 
-# Las imágenes son pequeñas, monocromáticas y pertenecen a diez categorías de prendas. Los resultados no representan la complejidad de imágenes de alta resolución ni de otros dominios.
+El proyecto incluye visualizaciones de reconstrucción, muestras e interpolación, así como una aplicación para explorar cambios en las coordenadas latentes.
 
-# 
 
-# La calidad visual de una reconstrucción no equivale necesariamente a fidelidad semántica. El VAE puede producir imágenes borrosas o poco reconocibles, y el espacio latente bidimensional puede limitar la diversidad de las muestras.
 
-# 
+La inspección visual permite observar la apariencia de las imágenes y las transiciones entre puntos latentes, pero no demuestra por sí sola diversidad suficiente ni ausencia de memorización.
 
-# La evaluación realizada es académica. Antes de cualquier uso externo, se recomienda revisar visualmente las salidas, documentar las condiciones de ejecución, calcular métricas adicionales y comprobar posibles casos de memorización.
 
-# 
 
-# \## Conclusión
+Para fortalecer la evaluación se recomienda:
 
-# 
 
-# El desarrollo de este laboratorio permitió implementar, entrenar y analizar dos enfoques de aprendizaje profundo para la reconstrucción y generación de imágenes: el Autoencoder (AE) y el Autoencoder Variacional (VAE), utilizando Fashion-MNIST como conjunto de datos de referencia. Ambos modelos permiten estudiar cómo una red neuronal aprende representaciones comprimidas de los datos, aunque difieren en la forma en que construyen y utilizan el espacio latente.
 
-# 
+\- Mostrar 16 ejemplos de prueba seleccionados con una semilla fija.
 
-# En la ejecución realizada, el Autoencoder alcanzó una pérdida de entrenamiento de \*\*0.3060\*\* y una pérdida de validación de \*\*0.3071\*\*, con un tiempo de entrenamiento aproximado de \*\*5.16 segundos\*\*. La proximidad entre ambas pérdidas sugiere un comportamiento consistente en los datos evaluados, aunque no constituye, por sí sola, una prueba definitiva de generalización. Por su parte, el VAE obtuvo una pérdida total de \*\*273.6144\*\*, compuesta por una pérdida de reconstrucción de \*\*267.3546\*\* y una divergencia KL de \*\*6.2598\*\*, con un tiempo de entrenamiento aproximado de \*\*8.67 segundos\*\*. Estas pérdidas no son directamente comparables, ya que responden a objetivos de optimización diferentes.
+\- Comparar originales, reconstrucciones del AE, reconstrucciones del VAE y muestras nuevas.
 
-# 
+\- Examinar muestras sin seleccionar únicamente los mejores resultados.
 
-# Desde el punto de vista metodológico, el AE prioriza la reconstrucción de las imágenes de entrada, mientras que el VAE incorpora una regularización probabilística que facilita el muestreo y la exploración de un espacio latente continuo. Esta diferencia permite comprender que la evaluación de un modelo generativo no debe limitarse a la pérdida final: también debe considerar la calidad visual de las reconstrucciones, la coherencia de las muestras generadas, la diversidad de las salidas y el costo computacional.
+\- Comparar las muestras generadas con sus vecinos más cercanos del entrenamiento.
 
-# 
+\- Añadir métricas cuantitativas de calidad y diversidad cuando corresponda.
 
-# Las visualizaciones obtenidas permiten examinar imágenes originales, reconstrucciones, muestras generadas e interpolaciones entre puntos latentes. Sin embargo, la inspección visual no es suficiente para demostrar que las muestras presentan diversidad adecuada o que el modelo no memoriza ejemplos del entrenamiento. Además, la dimensión latente de dos variables facilita la interpretación visual, pero puede restringir la representación de variaciones complejas presentes en las prendas.
 
-# 
 
-# En términos de eficiencia, el AE requirió menos tiempo de entrenamiento y cuenta con \*\*25,888 parámetros\*\*, frente a los \*\*202,516 parámetros combinados del codificador y decodificador del VAE\*\*. Esta diferencia refleja un mayor costo paramétrico del VAE en la implementación evaluada, asociado a su objetivo probabilístico y a su arquitectura. No obstante, la cantidad de parámetros y el tiempo de ejecución no determinan por sí solos la calidad de las imágenes generadas.
+\## 8. Limitaciones y riesgos
 
-# 
 
-# En conclusión, el laboratorio evidencia que la selección entre un AE y un VAE depende del objetivo de la aplicación: la reconstrucción eficiente constituye una prioridad para el AE, mientras que la exploración de un espacio latente probabilístico y el muestreo de nuevas imágenes son aspectos centrales del VAE. Para establecer una comparación más rigurosa, sería conveniente realizar varias ejecuciones con distintas semillas, medir cuantitativamente la calidad y diversidad de las imágenes y analizar posibles casos de memorización. De esta manera, las conclusiones podrían sustentarse no solo en las pérdidas y los tiempos registrados, sino también en evidencias reproducibles sobre la capacidad de reconstrucción y generación de cada modelo.
+
+\- Fashion-MNIST contiene imágenes pequeñas y monocromáticas.
+
+\- El VAE puede producir imágenes borrosas o poco plausibles.
+
+\- Una interpolación gradual no garantiza que todas las imágenes intermedias sean realistas.
+
+\- Una muestra sintética no garantiza originalidad, privacidad ni ausencia de sesgo.
+
+\- La similitud con imágenes de entrenamiento debe analizarse antes de afirmar que no existe memorización.
+
+\- Los tiempos dependen del hardware y de las condiciones de ejecución.
+
+
+
+\## 9. Uso responsable
+
+
+
+Estos modelos se presentan con fines educativos. Sus resultados no deben interpretarse como imágenes reales ni como evidencia de que una muestra sea original o privada. Cualquier uso fuera del contexto académico requiere una evaluación adicional de calidad, riesgos y adecuación al propósito.
+
+
+
+\## 10. Reproducibilidad
+
+
+
+Para preparar el entorno y ejecutar el proyecto:
+
+
+
+```bash
+
+uv sync --extra cpu
+
+uv run python scripts/check\_runtime.py
+
+uv run python scripts/train\_ae\_vae.py --epochs-ae 6 --epochs-vae 8
+
+uv run pytest -q
+
+```
+
+
+
+La ejecución registrada reportó cuatro pruebas aprobadas. Los resultados y tiempos pueden variar según las versiones del software, el hardware y las condiciones de ejecución.
+
+
+
+\## 11. Conclusión
+
+
+
+El proyecto permitió comparar un AE orientado a reconstrucción con un VAE que incorpora una representación latente probabilística y capacidad de muestreo. El AE presentó menor costo paramétrico y menor tiempo de entrenamiento en la ejecución registrada, mientras que el VAE permitió explorar generación e interpolaciones en el espacio latente.
+
+
+
+La selección entre ambos depende del objetivo del experimento. Una evaluación más completa debe considerar reconstrucción, calidad de las muestras, diversidad, posibles similitudes con los datos de entrenamiento y costo computacional.
+
+
+
+\---
+
+
+
+\*\*Repositorio:\*\* \[INF8239\_U03\_Generativos](https://github.com/jerusizapata-dot/INF8239\_U03\_Generativos)
 
