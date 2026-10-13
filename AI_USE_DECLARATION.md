@@ -6,51 +6,55 @@
 
 
 
-| Campo | Información |
+\- \*\*Asignatura:\*\* INF-8239 · Ciencia de Datos II
 
-|---|---|
+\- \*\*Laboratorio:\*\* U03.LAB10
 
-| Asignatura | INF-8239 · Ciencia de Datos II |
+\- \*\*Estudiante:\*\* Laudys Jerusi Zapata
 
-| Unidad | 03 · Algoritmos y características generativas |
+\- \*\*Autor académico:\*\* Edwin Ramón José Nolasco
 
-| Laboratorio | U03.LAB10 |
-
-| Estudiante | Laudys Jerusi Zapata |
-
-| Autor académico | Edwin Ramón José Nolasco |
-
-| Proyecto | Autoencoder y VAE con Fashion-MNIST |
+\- \*\*Proyecto:\*\* Autoencoder y autoencoder variacional (VAE) con Fashion-MNIST
 
 
 
-\## 1. Uso de herramientas de inteligencia artificial
+\## Uso de herramientas de inteligencia artificial
 
 
 
-Se utilizaron herramientas de inteligencia artificial como apoyo puntual durante el desarrollo del laboratorio, principalmente para resolver dudas técnicas, revisar aspectos de la implementación y mejorar la organización y redacción de la documentación.
+Se utilizó inteligencia artificial como apoyo puntual durante el desarrollo del laboratorio para resolver dudas técnicas, revisar fragmentos de código, organizar la documentación y mejorar la claridad de las explicaciones.
 
 
 
-\## 2. Trabajo realizado por la estudiante
+\## Responsabilidad académica
 
 
 
-La estudiante es responsable de ejecutar y revisar el proyecto, interpretar los resultados obtenidos, verificar las pruebas y comprender el funcionamiento de los modelos implementados.
+La estudiante es responsable de ejecutar y revisar el proyecto, comprobar los resultados obtenidos, interpretar las métricas y comprender el funcionamiento de los modelos implementados.
 
 
 
-El uso de estas herramientas no sustituye la comprensión de los conceptos, la revisión del código ni la responsabilidad académica sobre el trabajo entregado.
+El uso de estas herramientas no sustituye la revisión del código, la experimentación ni la comprensión de los conceptos estudiados.
 
 
 
-\## 3. Responsabilidad y transparencia
+\## Verificación y limitaciones
 
 
 
-Los resultados documentados corresponden a la ejecución registrada en el proyecto. Las métricas, las limitaciones y las conclusiones deben interpretarse de acuerdo con las evidencias disponibles, sin atribuir a los modelos capacidades que no hayan sido verificadas.
+Los resultados documentados corresponden a las ejecuciones registradas en el proyecto. Las métricas, los tiempos y las visualizaciones deben interpretarse de acuerdo con las condiciones experimentales descritas.
 
 
 
-\*\*Declaración:\*\* este documento reconoce el uso de inteligencia artificial como herramienta de apoyo y mantiene la responsabilidad académica de la estudiante sobre el trabajo presentado.
+Las sugerencias generadas mediante inteligencia artificial deben revisarse antes de incorporarse al trabajo. No se consideran evidencia experimental aquellas comprobaciones que no se hayan ejecutado y verificado.
+
+
+
+\## Declaración final
+
+
+
+Esta declaración busca mantener la transparencia sobre el uso de inteligencia artificial como herramienta de apoyo académico. La estudiante asume la responsabilidad por la versión final entregada y por la interpretación de sus resultados.
+
+
 
