@@ -1,32 +1,32 @@
-\# DECLARACIÓN DE USO DE INTELIGENCIA ARTIFICIAL
+# DECLARACIÓN DE USO DE INTELIGENCIA ARTIFICIAL
 
 
 
-\*\*INF-8239 · Ciencia de Datos II\*\*
+**INF-8239 · Ciencia de Datos II**
 
 
 
-\*\*Laboratorio:\*\* U03.LAB10
+**Laboratorio:** U03.LAB10
 
 
 
-\*\*Estudiante:\*\* Laudys Jerusi Zapata
+**Estudiante:** Laudys Jerusi Zapata
 
 
 
-\*\*Autor académico:\*\* Edwin Ramón José Nolasco
+**Autor académico:** Edwin Ramón José Nolasco
 
 
 
-\*\*Proyecto:\*\* Autoencoder y autoencoder variacional (VAE) con Fashion-MNIST
+**Proyecto:** Autoencoder y autoencoder variacional (VAE) con Fashion-MNIST
 
 
 
-\---
+---
 
 
 
-\## 1. Propósito de la declaración
+## 1. Propósito de la declaración
 
 
 
@@ -34,11 +34,11 @@ El presente documento tiene como propósito declarar de manera transparente el u
 
 
 
-\---
+---
 
 
 
-\## 2. Uso de herramientas de inteligencia artificial
+## 2. Uso de herramientas de inteligencia artificial
 
 
 
@@ -46,11 +46,11 @@ Se utilizó inteligencia artificial como herramienta de apoyo puntual para resol
 
 
 
-\---
+---
 
 
 
-\## 3. Responsabilidad académica
+## 3. Responsabilidad académica
 
 
 
@@ -62,11 +62,11 @@ El uso de herramientas de inteligencia artificial no sustituye la revisión del 
 
 
 
-\---
+---
 
 
 
-\## 4. Verificación de los resultados
+## 4. Verificación de los resultados
 
 
 
@@ -78,11 +78,11 @@ Las sugerencias generadas mediante inteligencia artificial deben revisarse antes
 
 
 
-\---
+---
 
 
 
-\## 5. Transparencia y limitaciones
+## 5. Transparencia y limitaciones
 
 
 
@@ -94,11 +94,11 @@ El contenido final debe reflejar el trabajo realizado y los resultados que se ha
 
 
 
-\---
+---
 
 
 
-\## 6. Declaración final
+## 6. Declaración final
 
 
 
