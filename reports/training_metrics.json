@@ -1,0 +1,20 @@
+{
+  "seed": 42,
+  "dataset": "Fashion-MNIST",
+  "train_samples": 60000,
+  "test_samples": 10000,
+  "ae_epochs_requested": 6,
+  "vae_epochs_requested": 8,
+  "ae_epochs_completed": 6,
+  "vae_epochs_completed": 8,
+  "ae_final_train_loss": 0.30604106187820435,
+  "ae_final_validation_loss": 0.30709752440452576,
+  "vae_final_loss": 273.61444091796875,
+  "vae_final_reconstruction_loss": 267.3546447753906,
+  "vae_final_kl_loss": 6.259810447692871,
+  "ae_train_seconds": 5.156203499995172,
+  "vae_train_seconds": 8.66794850002043,
+  "ae_parameters": 25888,
+  "encoder_parameters": 100996,
+  "decoder_parameters": 101520
+}
